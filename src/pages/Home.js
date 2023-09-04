@@ -9,19 +9,19 @@ const Home = () => {
       <Navbar/>
       <div className=''>
 
-        <div className="absolute left-[5%] top-[20%] text-white text-4xl md:text-5xl lg:text-6xl">
+        <div className="absolute left-[10%] top-[20%] text-white text-4xl md:text-5xl lg:text-6xl">
           <p>VERSATILE</p>
           <p>DINING</p>
           <p>EXPERIENCE</p>
         </div>
 
-        <div className='absolute text-white left-[5%] top-[40%] md:top-[45%] md:text-lg lg:top-[50%]'>
+        <div className='absolute text-white left-[10%] top-[40%] md:top-[45%] md:text-lg lg:top-[50%]'>
           <p>Welcome to our restaurant, where the art of culinary</p>
           <p>craftsmanship meets a world of flavors,</p>
           <p>creating unforgettable dining experiences</p>
         </div>
         
-        <div className='absolute text-white left-[5%] top-[60%]'>
+        <div className='absolute text-white left-[10%] top-[60%] lg:top-[70%]'>
           <button className='p-2 border-2 rounded-sm mr-16'>Order Now</button>  
           <button className='p-2 border-2 rounded-sm'>Book a Table </button>
         </div>

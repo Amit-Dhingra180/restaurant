@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
       <div className='absolute w-full h-24 bg-black inset-0 flex justify-between items-center p-4'>
         
-        <div className=' text-yellow-500 text-4xl ml-6'>
+        <div className=' text-yellow-500 text-4xl ml-6 md:ml-16 md:text-5xl lg:ml-32'>
           Gourmet
         </div>
 
@@ -29,7 +29,7 @@ const Navbar = () => {
           {!nav ? <AiOutlineClose size={28}/> : <AiOutlineMenu size={28}/>}          
         </div>
 
-        <div className={!nav ? 'flex flex-col items-center justify-around text-4xl text-white fixed top-0 left-0 w-[50%] h-full bg-red-600 ease-in-out duration-500 md:hidden z-10' : 'fixed left-[-100%]'}>
+        <div className={!nav ? 'flex flex-col items-center justify-around text-4xl text-white fixed top-0 left-0 w-[50%] h-full bg-gray-800 ease-in-out duration-500 md:hidden z-10' : 'fixed left-[-100%]'}>
           <div className=' text-yellow-500 text-4xl ml-6'>
             Gourmet
           </div>
