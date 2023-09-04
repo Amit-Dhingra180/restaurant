@@ -7,7 +7,6 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-      <Navbar/>
         <Routes>
           <Route path='/' exact Component={Home}/>
           <Route path='/menu' Component={Menu}/>
