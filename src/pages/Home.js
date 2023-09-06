@@ -22,7 +22,9 @@ const Home = () => {
         </div>
         
         <div className='absolute text-white left-[10%] top-[60%] lg:top-[70%]'>
-          <button className='p-2 border-2 rounded-sm mr-16'>Order Now</button>  
+          <Link to="/menu">          
+            <button className='p-2 border-2 rounded-sm mr-16'>Order Now</button>  
+          </Link>
           <button className='p-2 border-2 rounded-sm'>Book a Table </button>
         </div>
         </div>
