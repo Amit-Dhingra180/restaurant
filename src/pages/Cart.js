@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 
   const Cart = () => {
   const result = localStorage.getItem('selectedItems');
-let parsedResult;
+  let parsedResult;
 
 if (result) {
   parsedResult = JSON.parse(result);
