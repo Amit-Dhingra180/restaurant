@@ -19,12 +19,33 @@ const Card = ({ foodCategory, foodData }) => {
       // If it's a new item, add it to the cart with a quantity of 1
       currentItems.push({ ...x, quantity: 1 });
     }
-  
     // Stringify the updated items array and store it back in localStorage
     localStorage.setItem('selectedItems', JSON.stringify(currentItems));
   };
   
-
+  const removeFromCart = (x) => {
+    // Get the current items from localStorage
+    const currentItems = JSON.parse(localStorage.getItem('selectedItems')) || [];
+  
+    // Find the item in the cart
+    const existingItemIndex = currentItems.findIndex((item) => item.id === x.id);
+  
+    if (existingItemIndex !== -1) {
+      const existingItem = currentItems[existingItemIndex];
+  
+      if (existingItem.quantity > 1) {
+        // If the item quantity is greater than 1, decrement its quantity
+        existingItem.quantity -= 1;
+      } else {
+        // If the item quantity is 1, remove it from the cart
+        currentItems.splice(existingItemIndex, 1);
+      }
+  
+      // Stringify the updated items array and store it back in localStorage
+      localStorage.setItem('selectedItems', JSON.stringify(currentItems));
+    }
+  };
+  
 
   return (
     <div>
@@ -38,7 +59,7 @@ const Card = ({ foodCategory, foodData }) => {
               <div>
                 <button onClick={() => addToCart(foodItem)} className='text-white bg-black w-7 h-7 rounded-lg text-lg mr-2 px-2'>+</button>
                 <span className='mr-2'>0</span>
-                <button  className='text-white bg-black w-7 h-7 rounded-lg text-lg mr-2 px-2 font-bold'>-</button>
+                <button  onClick={() => removeFromCart(foodItem)} className='text-white bg-black w-7 h-7 rounded-lg text-lg mr-2 px-2 font-bold'>-</button>
               </div>
             </div>
           </div>

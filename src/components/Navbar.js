@@ -36,9 +36,9 @@ const Navbar = () => {
           CulinaryGrove
           </div>
           <Link to='/menu'>Menu</Link>
-          <Link to='/'>About</Link>
-          <Link to='/menu'>Contact</Link>
-          <Link to='/menu'>Cart</Link>
+          <Link to='/about'>About</Link>
+          <Link to='/contact'>Contact</Link>
+          <Link to='/cart'>Cart</Link>
         </div>
 
       </div>
