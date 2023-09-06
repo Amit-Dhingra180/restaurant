@@ -25,8 +25,6 @@ const Menu = () => {
     fetchData();
   }, []);
 
-  console.log({foodData})
-
   return (
     <div className="">    
         <Navbar/>
