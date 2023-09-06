@@ -7,14 +7,13 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 
 
-
-
 function App() {
 
   return (
     <div>
       <BrowserRouter>
-        <Routes>
+      
+        <Routes> 
           <Route path='/' exact Component={Home}/>
           <Route path='/menu' Component={Menu}/>
           <Route path='/about' Component={About}/>
@@ -22,6 +21,7 @@ function App() {
           <Route path='/contact' Component={Contact}/>
           <Route path='/login' Component={Login}/>
         </Routes>
+        
       </BrowserRouter>
     </div>
     
