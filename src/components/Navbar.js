@@ -23,7 +23,7 @@ const Navbar = () => {
           <Link to='/menu' >Menu</Link>
           <Link to='/about'>About</Link>
           <Link to='/contact'>Contact</Link>
-          <Link to='/cart'>Cart {totalQuantity}</Link>
+          <Link to='/cart'>Cart {}</Link>
           <Link to='/login'><CgProfile size={30}/></Link> 
         </div>
 
@@ -38,7 +38,7 @@ const Navbar = () => {
           <Link to='/menu'>Menu</Link>
           <Link to='/about'>About</Link>
           <Link to='/contact'>Contact</Link>
-          <Link to='/cart'>Cart {totalQuantity}</Link>
+          <Link to='/cart'>Cart {}</Link>
         </div>
 
       </div>
