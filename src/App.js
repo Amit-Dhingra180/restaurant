@@ -6,9 +6,9 @@ import Cart from "./pages/Cart";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 
-window.addEventListener('beforeunload', () => {
-  localStorage.clear();
-});
+//window.addEventListener('beforeunload', () => {
+  //localStorage.clear();
+//});
 
 function App() {
 

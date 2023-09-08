@@ -1,6 +1,7 @@
 import React from 'react';
+import Counter from '../Counter';
 
-const Card = ({ foodCategory, foodData }) => {
+const Card = ({ foodCategory, foodData  }) => {
   // Filter the foodData based on the foodCategory
   const filteredFood = foodData.filter((item) => item.data.category === foodCategory);
 
@@ -21,6 +22,7 @@ const Card = ({ foodCategory, foodData }) => {
     }
     // Stringify the updated items array and store it back in localStorage
     localStorage.setItem('selectedItems', JSON.stringify(currentItems));
+    
   };
   
   const removeFromCart = (x) => {
@@ -44,23 +46,21 @@ const Card = ({ foodCategory, foodData }) => {
       // Stringify the updated items array and store it back in localStorage
       localStorage.setItem('selectedItems', JSON.stringify(currentItems));
     }
+    
   };
   
 
   return (
     <div>
       {filteredFood.map((foodItem) => (
+        
         <div key={foodItem.id} className='w-[220px] inline-block p-2 mx-2 ease-in-out duration-300 lg:w-[400px]'>
           <img src={foodItem.data.image} alt="Food Item" className="w-full h-40 object-cover rounded-lg lg:h-64" />
           <div className="p-2">
             <h2 className="whitespace-normal text-xl font-semibold lg:text-4xl">{foodItem.data.name}</h2>
-            <div className='flex justify-between'>
-              <p className="text-red-500 font-bold mt-2">{foodItem.data.price}</p>
-              <div>
-                <button onClick={() => addToCart(foodItem)} className='text-white bg-black w-7 h-7 rounded-lg text-lg mr-2 px-2'>+</button>
-                <span className='mr-2'>0</span>
-                <button  onClick={() => removeFromCart(foodItem)} className='text-white bg-black w-7 h-7 rounded-lg text-lg mr-2 px-2 font-bold'>-</button>
-              </div>
+            <div className='flex justify-between mt-1'>
+              <p className="text-red-500 font-bold mt-1 ml-2 lg:text-xl lg:mt-3 lg:ml-3">{foodItem.data.price}</p>
+              <Counter item={foodItem} addToCart={addToCart} removeFromCart={removeFromCart} />
             </div>
           </div>
         </div>
