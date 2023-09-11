@@ -13,7 +13,7 @@ const Navbar = () => {
     }
 
     return (
-      <div className='fixed top-0 w-full h-24 bg-black inset-0 flex justify-between items-center p-4'>
+      <div className='absolute w-full h-24 bg-black inset-0 flex justify-between items-center p-4'>
         
         <div className=' text-yellow-500 text-4xl ml-6 md:ml-16 md:text-5xl lg:ml-32'>
           <Link to='/'>CulinaryGrove</Link>
@@ -45,4 +45,4 @@ const Navbar = () => {
     );
 }
 
-export default Navbar
+export default Navbar;
