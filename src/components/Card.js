@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from '../Counter';
+import Counter from './Counter';
 
 const Card = ({ foodCategory, foodData  }) => {
   // Filter the foodData based on the foodCategory

@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../Firebase";
+import Footer from '../components/Footer';
 
 const Menu = () => {
   const [foodData, setFoodData] = useState([]);
@@ -31,6 +32,7 @@ const Menu = () => {
         <h1 className='text-5xl mt-32 text-center font-bold'>Menu</h1>   
         <Slider row="1" heading="Burgers" foodCategory="burger" foodData={foodData}/>    
         <Slider row="2" heading="Pizzas" foodCategory="pizza" foodData={foodData}/>    
+        <Footer/>
     </div>
   )
 }
