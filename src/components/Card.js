@@ -55,7 +55,7 @@ const Card = ({ foodCategory, foodData  }) => {
       {filteredFood.map((foodItem) => (
         
         <div key={foodItem.id} className='w-[220px] inline-block p-2 mx-2 ease-in-out duration-300 lg:w-[400px]'>
-          <img src={foodItem.data.image} alt="Food Item" className="w-full h-40 object-cover rounded-lg lg:h-64" />
+          <img src={foodItem.data.image} alt="Food Item" className="w-full h-40 object-cover rounded-lg lg:h-64 hover:scale-105 hover:ease-in-out duration-500" />
           <div className="p-2">
             <h2 className="whitespace-normal text-xl font-semibold lg:text-4xl">{foodItem.data.name}</h2>
             <div className='flex justify-between mt-1'>

@@ -12,6 +12,17 @@ if (result) {
   parsedResult = []; // You can set it as an empty array or handle it differently based on your needs
 }
 
+// Calculate the total price
+const totalPrice = parsedResult.reduce((total, item) => {
+  // Calculate the subtotal for each item (quantity * price)
+  const subtotal = item.quantity * item.data.price;
+  // Add the subtotal to the total
+  return total + subtotal;
+}, 0); // Initialize total with 0
+
+const delivery = 10
+const gst = 0.1*totalPrice
+const total = delivery + gst + totalPrice
 
   return (
     <div className='mx-3 md:mx-14 lg:mx-20'>
@@ -49,28 +60,28 @@ if (result) {
       <div>
         <h1 className='mt-8 text-center text-xl font-semibold lg:text-3xl'>Cart Total</h1>
           <div className='p-4 border-4 mt-4'>
-            <table className="min-w-full md:text-xl text-center">
+            <table className="min-w-full md:text-xl text-left">
               <tr>
                 <td className='py-4 font-semibold'>Subtotal</td>
-                <td>something</td>
+                <td>{totalPrice}</td>
               </tr>
               <tr>
                 <td className='py-4 font-semibold'>Delivery</td>
-                <td>something</td>
+                <td>{delivery}</td>
               </tr>
               <tr>
                 <td className='py-4 font-semibold'>GST (10%)</td>
-                <td>something</td>
+                <td>{gst}</td>
               </tr>
               <tr>
                 <td className='py-4 font-semibold'>Total</td>
-                <td className='font-semibold'>something</td>
+                <td className='font-semibold'>{total}</td>
               </tr>
             </table>
           </div>
       </div>
       <div className='flex justify-center mt-6 text-xl font-semibold'>
-        <button className='text-white bg-black w-[80%] h-24 lg:w-[60%] lg:text-2xl'>
+        <button className='text-white mb-6 bg-black w-[80%] h-24 lg:w-[60%] lg:text-2xl'>
             Proceed To Pay
         </button>
       </div>

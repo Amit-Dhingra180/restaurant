@@ -3,25 +3,27 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <div className='w-full bg-gray-200'>
-        <div className='md:flex justify-around'>
+    <div className='w-full bg-gray-200 pb-6'>
+        <div className='md:flex justify-around text-center py-4'>
             <div>
-                <h1 className='text-lg font-semibold'>Contact Us</h1>
-                <p>Call Us</p>
-                <p>900-819-6040</p>
-                <p>Email Us</p>
-                <p>something@gmail.com</p>
-                <p>Our Location</p>
-                <p>577 Gladstone Ave Ottawa, ON K1R5P2</p>
+                <h1 className='text-lg font-semibold pt-4 lg:text-3xl'>Contact Us</h1>
+                    <div className='lg:text-xl'>
+                        <p className='pt-2'>Call Us</p>
+                        <p>900-819-6040</p>
+                        <p className='pt-2'>Email Us</p>
+                        <p>something@gmail.com</p>
+                        <p className='pt-2'>Our Location</p>
+                        <p>577 Gladstone</p>
+                    </div>
+                </div>
+            <div>
+                <h1 className='text-lg font-semibold pt-4 lg:text-3xl'>Gourmet</h1>
+                <p className='pt-2 lg:text-2xl'>write a catchy slogan here  </p>
             </div>
             <div>
-                <h1 className='text-lg font-semibold'>Gourmet</h1>
-                <p>write a catchy slogan here  </p>
-            </div>
-            <div>
-                <h1 className='text-lg font-semibold'>Quick Links</h1>
-                <div className='flex flex-col'>
-                    <Link to='/menu' >Menu</Link>
+                <h1 className='text-lg font-semibold pt-4 lg:text-3xl'>Quick Links</h1>
+                <div className='flex flex-col space-y-2 lg:text-2xl lg:space-y-4'>
+                    <Link to='/menu' className='pt-2'>Menu</Link>
                     <Link to='/about'>About</Link>
                     <Link to='/contact'>Contact</Link>
                     <Link to='/cart'>Cart {}</Link>
@@ -29,7 +31,7 @@ const Footer = () => {
 
             </div>
         </div>
-        <div className='mt-6 md:flex justify-between'>
+        <div className='mt-4 text-center md:flex justify-around lg:text-xl'>
             <p>© 2023 Ottawa Kabab. All rights reserved | Powered by Arabz</p>
             <p>Terms & Conditions | Privacy Policy</p>
         </div>
