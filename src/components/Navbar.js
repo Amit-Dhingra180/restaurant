@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className='absolute w-full h-24 bg-black inset-0 flex justify-between items-center p-4'>
         
         <div className=' text-yellow-500 text-4xl ml-6 md:ml-12  lg:text-6xl xl:ml-32'>
-          <Link to='/'>CulinaryGrove</Link>
+          <Link to='/'>Gourmet</Link>
         </div>
 
         <div className='text-white space-x-8 mr-6 text-lg hidden md:flex items-center lg:text-xl lg:mr-16 lg:space-x-16'>

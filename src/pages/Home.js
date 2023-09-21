@@ -25,7 +25,6 @@ const Home = () => {
           <Link to="/menu">          
             <button className='hover:text-yellow-500 p-2 border-2 rounded-sm mr-16 lg:text-2xl lg:p-4'>Order Now</button>  
           </Link>
-          <button className='hover:text-yellow-500 p-2 border-2 rounded-sm lg:text-2xl lg:p-4'>Book a Table </button>
         </div>
         </div>
     </div>
